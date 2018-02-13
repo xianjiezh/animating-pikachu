@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <script>
+        let pageWidth = window.innerWidth
+        if(pageWidth > 800){
+            pageWidth = 800
+        }
+        document.write('<style>html{font-size:' + pageWidth / 10 + 'px;}</style>')
+    </script>
+    <style>
+        #code{
+            font-size:14px;
+            width: 100%;
+            height: 100vh;
+            background-color: rgba(222,222,222,.9);
+            z-index: 2;
+            float: left;
+        }
+    
+    </style>
+    <title>皮卡丘--动</title>
+</head>
+<body>
+    <div class="main-wrapper">
+        <div class="nose"></div>
+        <div class="eye right"></div>
+        <div class="eye left"></div>
+        <div class="cheek cheek-left"></div>
+        <div class="cheek cheek-right"></div>
+        <div class="upper-lip lip-left"></div>
+        <div class="upper-lip lip-right"></div>
+        <div class="lower-lip-wrapper">
+            <div class="lower-lip"></div>
+        </div>
+    </div>
+    <div id="code"></div>
+    <script src="./prism.js"></script>
+    <script src="main.js"></script>
+</body>
+</html>
