@@ -74,5 +74,62 @@ body{
             position: absolute;
             left: px(15);
         }
+        .upper-lip{
+            width: px(70);
+            height: px(15);
+            position: absolute;
+            top: px(57);
+            border: 2px solid black;
+            background-color: #ffe600;
+            z-index: 1;
+        }
+        .lip-left{
+            border-bottom-left-radius: px(20);
+            border-top: none;
+            border-right: none;
+            transform: rotate(-15deg);
+            position: absolute;
+            left: px(121);
+        }
+        .lip-right{
+            border-bottom-right-radius: px(20);
+            border-top: none;
+            border-left: none;
+            transform: rotate(15deg);
+            position: absolute;
+            right: px(121);
+        }
+        .lower-lip-wrapper{
+            width: px(150);
+            height: px(150);
+            position: absolute;
+            top: px(63);
+            left: 50%;
+            transform: translateX(-50%);
+            overflow: hidden;
+        }
+        .lower-lip{
+            height: px(900);
+            width: px(150);
+            border-radius: 50% 50%;
+            border: px(2) solid black;
+            background-color: #9b000a;
+            position: absolute;
+            bottom: 0;
+            z-index: -1;
+            overflow: hidden;
+        }
+        .lower-lip::after{
+            content: '';
+            display: block;
+            width: px(130);
+            height: px(130);
+            border-radius: 50%;
+            background-color: #ff485f;
+            position: absolute;
+            bottom: 0;
+            left: 50%;
+            transform: translateX(-50%);
+        }
     }
 }
