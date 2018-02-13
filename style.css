@@ -11,7 +11,7 @@ body {
   align-items: center; }
   body .main-wrapper {
     width: 100%;
-    height: 7.89474rem;
+    height: 5.26316rem;
     position: relative; }
     body .main-wrapper .nose {
       width: 0;
@@ -43,10 +43,12 @@ body {
       left: 0.18421rem; }
     body .main-wrapper .right {
       position: absolute;
-      right: 1.76316rem; }
+      left: 50%;
+      transform: translateX(1.84211rem); }
     body .main-wrapper .left {
       position: absolute;
-      left: 1.76316rem; }
+      right: 50%;
+      transform: translateX(-1.84211rem); }
     body .main-wrapper .cheek {
       width: 1.89474rem;
       height: 1.89474rem;
@@ -57,10 +59,12 @@ body {
       top: 2.5rem; }
     body .main-wrapper .cheek-right {
       position: absolute;
-      right: 0.39474rem; }
+      left: 50%;
+      transform: translateX(2.5rem); }
     body .main-wrapper .cheek-left {
       position: absolute;
-      left: 0.39474rem; }
+      right: 50%;
+      transform: translateX(-2.5rem); }
     body .main-wrapper .upper-lip {
       width: 1.84211rem;
       height: 0.39474rem;
@@ -75,19 +79,19 @@ body {
       border-right: none;
       transform: rotate(-15deg);
       position: absolute;
-      left: 3.18421rem; }
+      right: 50%; }
     body .main-wrapper .lip-right {
       border-bottom-right-radius: 0.52632rem;
       border-top: none;
       border-left: none;
       transform: rotate(15deg);
       position: absolute;
-      right: 3.18421rem; }
+      left: 50%; }
     body .main-wrapper .lower-lip-wrapper {
       width: 3.94737rem;
       height: 3.94737rem;
       position: absolute;
-      top: 1.65789rem;
+      top: 1.63158rem;
       left: 50%;
       transform: translateX(-50%);
       overflow: hidden; }

@@ -16,7 +16,7 @@ body{
     align-items: center;
     .main-wrapper{
         width: 100%;
-        height: px(300);
+        height: px(200);
         position: relative;
         .nose{
             width: 0;
@@ -51,11 +51,13 @@ body{
         }
         .right{
             position: absolute;
-            right: px(67);
+            left: 50%;
+            transform: translateX(px(70))
         }
         .left{
             position: absolute;
-            left: px(67);
+            right: 50%;
+            transform: translateX(px(-70))
         }
         .cheek{
             width: px(72);
@@ -68,11 +70,13 @@ body{
         }
         .cheek-right{
             position: absolute;
-            right: px(15);
+            left: 50%;
+            transform: translateX(px(95))
         }
         .cheek-left{
             position: absolute;
-            left: px(15);
+            right: 50%;
+            transform: translateX(px(-95))
         }
         .upper-lip{
             width: px(70);
@@ -89,7 +93,7 @@ body{
             border-right: none;
             transform: rotate(-15deg);
             position: absolute;
-            left: px(121);
+            right: 50%;
         }
         .lip-right{
             border-bottom-right-radius: px(20);
@@ -97,13 +101,13 @@ body{
             border-left: none;
             transform: rotate(15deg);
             position: absolute;
-            right: px(121);
+            left: 50%;
         }
         .lower-lip-wrapper{
             width: px(150);
             height: px(150);
             position: absolute;
-            top: px(63);
+            top: px(62);
             left: 50%;
             transform: translateX(-50%);
             overflow: hidden;
