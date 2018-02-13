@@ -6,6 +6,9 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <script>
         let pageWidth = window.innerWidth
+        if(pageWidth > 800){
+            pageWidth = 800
+        }
         document.write('<style>html{font-size:' + pageWidth / 10 + 'px;}</style>')
     </script>
     <link rel="stylesheet" href="style.css">
