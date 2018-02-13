@@ -1,0 +1,78 @@
+
+$designWidth : 380;
+@function px( $px ){
+    @return $px / $designWidth * 10 + rem;
+}
+*{
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+body{
+    background-color: #ffe600;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    .main-wrapper{
+        width: 100%;
+        height: px(300);
+        position: relative;
+        .nose{
+            width: 0;
+            height: 0;
+            border-radius: 50%;
+            border: px(13) solid red;
+            border-width: px(13) px(14);
+            border-color: black transparent transparent transparent;
+            position: absolute;
+            top: px(20);
+            left: 50%;
+            transform: translateX(-50%)
+        }
+        .eye{
+            width: px(55);
+            height: px(55);
+            border-radius: 50%;
+            background-color: #2e2e2e;
+            position: relative;
+        }
+        .eye::before{
+            content: '';
+            display: block;
+            width: px(22);
+            height: px(22);
+            border: px(2) solid black;
+            border-radius: 50%;
+            background-color: #fff;
+            position: absolute;
+            top: px(2);
+            left: px(7);
+        }
+        .right{
+            position: absolute;
+            right: px(67);
+        }
+        .left{
+            position: absolute;
+            left: px(67);
+        }
+        .cheek{
+            width: px(72);
+            height: px(72);
+            border: px(2) solid black;
+            background-color: red;
+            border-radius: 50%;
+            position: absolute;
+            top: px(95);
+        }
+        .cheek-right{
+            position: absolute;
+            right: px(15);
+        }
+        .cheek-left{
+            position: absolute;
+            left: px(15);
+        }
+    }
+}
