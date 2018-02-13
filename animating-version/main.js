@@ -20,7 +20,8 @@ let code = `
 * {
     box-sizing: border-box;
     padding: 0;
-    margin: 0; }
+    margin: 0; 
+    transition: all .4s;}
   
   body {
     background-color: #ffe600;
@@ -138,5 +139,5 @@ let code = `
   
 `
 writeCode('#code', '', code, function(){
-    window.delete(document.getElementById('code'))
+    document.getElementById('code').remove()
 })
