@@ -1,22 +1,24 @@
 function writeCode(ele, prefix, code, callbackFn) {
-    let domCode = document.querySelector(ele)
-    domCode.innerHTML = prefix
-    let styleTag = document.createElement('style')
-    document.head.appendChild(styleTag)
-    let n = 0
-    let timer = setInterval(function () {
-        if (n < code.length) {
-            n += 1
-            domCode.innerHTML = Prism.highlight(prefix + code.substring(0, n), Prism.languages.css)
-            styleTag.innerHTML = prefix + code.substring(0, n)
-            domCode.scrollTo(0, document.documentElement.clientHeight)
-        } else if (n >= code.length) {
-            window.clearInterval(timer)
-            callbackFn()
-        }
-    }, 40)
+  let domCode = document.querySelector(ele)
+  domCode.innerHTML = prefix
+  let styleTag = document.createElement('style')
+  document.head.appendChild(styleTag)
+  let n = 0
+  let timer = setInterval(function () {
+    if (n < code.length) {
+      n += 1
+      domCode.innerHTML = Prism.highlight(prefix + code.substring(0, n), Prism.languages.css)
+      styleTag.innerHTML = prefix + code.substring(0, n)
+      domCode.scrollTo(0, document.documentElement.clientHeight)
+    } else if (n >= code.length) {
+      window.clearInterval(timer)
+      callbackFn()
+    }
+  }, 40)
 }
 let code = `
+/*这个是用scss生成的css，所以在页面上的缩进有点儿奇怪*/
+
 * {
     box-sizing: border-box;
     padding: 0;
@@ -136,8 +138,10 @@ let code = `
         bottom: 0;
         left: 50%;
         transform: translateX(-50%); }
-  
+  /*好了， 3s 之后我就要把删掉代码了*/
 `
-writeCode('#code', '', code, function(){
+writeCode('#code', '', code, function () {
+  setTimeout(function () {
     document.getElementById('code').remove()
+  }, 2000)
 })
