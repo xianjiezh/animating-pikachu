@@ -9,7 +9,8 @@ function writeCode(ele, prefix, code, callbackFn) {
       n += 1
       domCode.innerHTML = Prism.highlight(prefix + code.substring(0, n), Prism.languages.css)
       styleTag.innerHTML = prefix + code.substring(0, n)
-      domCode.scrollTo(0, document.documentElement.clientHeight)
+      let h = domCode.offsetHeight
+      domCode.scrollTo(0, h)
     } else if (n >= code.length) {
       window.clearInterval(timer)
       callbackFn()
@@ -17,8 +18,8 @@ function writeCode(ele, prefix, code, callbackFn) {
   }, 40)
 }
 let code = `
-/*这个是用scss生成的css，所以在页面上的缩进有点儿奇怪*/
-
+/*这个是用scss生成的css，所以没有缩进和换行*/
+/*我将展示用CSS画皮卡丘的过程*/
 * {
     box-sizing: border-box;
     padding: 0;
