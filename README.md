@@ -8,4 +8,4 @@ CSS画皮卡丘
 - 用JS动态向CSS中添加代码，使页面展示了画的过程
 
 
-![皮卡丘](https://raw.githubusercontent.com/xianjiezh/animating-pikachu/master/pikachu.png)
+[![皮卡丘](https://raw.githubusercontent.com/xianjiezh/animating-pikachu/master/pikachu.png)](https://xianjiezh.github.io/animating-pikachu/animating-version/)
